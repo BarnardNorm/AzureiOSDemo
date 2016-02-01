@@ -24,6 +24,7 @@
 		4983B0BD1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4983B0BB1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.m */; };
 		4983B0BE1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4983B0BC1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.xib */; };
 		4983B0C01C5EF0A70040E1E2 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4983B0BF1C5EF0A70040E1E2 /* MicrosoftAzureMobile.framework */; };
+		4983B0C41C5EF44A0040E1E2 /* NBUnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4983B0C31C5EF44A0040E1E2 /* NBUnderlineTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		4983B0BB1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBTextfieldTableViewCell.m; sourceTree = "<group>"; };
 		4983B0BC1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NBTextfieldTableViewCell.xib; sourceTree = "<group>"; };
 		4983B0BF1C5EF0A70040E1E2 /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicrosoftAzureMobile.framework; path = ../MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
+		4983B0C21C5EF44A0040E1E2 /* NBUnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBUnderlineTextField.h; sourceTree = "<group>"; };
+		4983B0C31C5EF44A0040E1E2 /* NBUnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBUnderlineTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,7 @@
 		4983B0A01C5E6B810040E1E2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4983B0C11C5EF4360040E1E2 /* Controls */,
 				4983B0821C5D8C430040E1E2 /* NBAppDelegate.h */,
 				4983B0831C5D8C430040E1E2 /* NBAppDelegate.m */,
 				4983B0A11C5E6BA50040E1E2 /* NBAzureClient.h */,
@@ -164,6 +168,15 @@
 				4983B0BC1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.xib */,
 			);
 			name = "Tableview Cells";
+			sourceTree = "<group>";
+		};
+		4983B0C11C5EF4360040E1E2 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				4983B0C21C5EF44A0040E1E2 /* NBUnderlineTextField.h */,
+				4983B0C31C5EF44A0040E1E2 /* NBUnderlineTextField.m */,
+			);
+			name = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +259,7 @@
 				4983B0811C5D8C430040E1E2 /* main.m in Sources */,
 				4983B0B11C5EA7BB0040E1E2 /* NBRootViewController.m in Sources */,
 				4983B09E1C5E6ACF0040E1E2 /* NBContactsTableViewController.m in Sources */,
+				4983B0C41C5EF44A0040E1E2 /* NBUnderlineTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

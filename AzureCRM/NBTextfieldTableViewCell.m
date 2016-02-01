@@ -6,12 +6,13 @@
 //  Copyright © 2016 NormBarnard. All rights reserved.
 //
 
+#import "NBUnderlineTextField.h"
 #import "NBTextfieldTableViewCell.h"
 
 @interface NBTextfieldTableViewCell() <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet NBUnderlineTextField *textField;
 
 @end
 
