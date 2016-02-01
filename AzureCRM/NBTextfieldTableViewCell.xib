@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="exB-qS-GMQ" customClass="NBUnderlineTextField">
-                        <rect key="frame" x="78" y="11" width="234" height="22"/>
+                        <rect key="frame" x="101" y="11" width="211" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="yyS-d8-RSn"/>
                         </constraints>
@@ -27,7 +28,7 @@
                         </connections>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFe-lg-Gbg">
-                        <rect key="frame" x="16" y="3" width="42" height="37"/>
+                        <rect key="frame" x="16" y="3" width="109" height="37"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -38,9 +39,16 @@
                     <constraint firstItem="QFe-lg-Gbg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="PWA-zG-DVR"/>
                     <constraint firstItem="QFe-lg-Gbg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="Rma-Mx-Umg"/>
                     <constraint firstAttribute="trailingMargin" secondItem="exB-qS-GMQ" secondAttribute="trailing" id="Yfd-1T-U3b"/>
-                    <constraint firstItem="exB-qS-GMQ" firstAttribute="leading" secondItem="QFe-lg-Gbg" secondAttribute="trailing" constant="20" id="fGy-ku-uMF"/>
+                    <constraint firstItem="exB-qS-GMQ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.66" id="Z61-XQ-Xcd"/>
+                    <constraint firstItem="exB-qS-GMQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QFe-lg-Gbg" secondAttribute="trailing" constant="20" id="a6L-lc-SMS"/>
+                    <constraint firstItem="QFe-lg-Gbg" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.34" id="ckt-4h-VOm"/>
                     <constraint firstAttribute="bottom" secondItem="QFe-lg-Gbg" secondAttribute="bottom" constant="3" id="rds-4B-tHL"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="a6L-lc-SMS"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="textField" destination="exB-qS-GMQ" id="f55-ar-RCg"/>

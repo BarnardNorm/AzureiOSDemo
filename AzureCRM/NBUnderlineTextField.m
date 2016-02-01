@@ -11,11 +11,15 @@
 @implementation NBUnderlineTextField
 
 - (CGRect)textRectForBounds:(CGRect)bounds {
-    return CGRectMake(8.0f, 0.0f, CGRectGetWidth(bounds) - 8.0f, CGRectGetHeight(bounds));
+    return CGRectInset(bounds, 8.0f, 0.0f);
 }
 
 - (CGRect)placeholderRectForBounds:(CGRect)bounds {
-    return CGRectMake(8.0f, 0.0f, CGRectGetWidth(bounds) - 8.0f, CGRectGetHeight(bounds));
+    return CGRectInset(bounds, 8.0f, 0.0f);
+}
+
+- (CGRect)editingRectForBounds:(CGRect)bounds {
+    return CGRectInset(bounds, 8.0f, 0.0f);
 }
 
 - (void)drawRect:(CGRect)rect {
