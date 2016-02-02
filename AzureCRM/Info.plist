@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AzureAppURL</key>
-    <string>{{ your azure app url }}</string>
+    <string>https://normsimplecrm.azurewebsites.net</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -25,16 +25,16 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-                <string>fb{{ your facebook app id }}</string>
+                <string>fb945150965573495</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>{{ your facebook app id }}</string>
+	<string>945150965573495</string>
 	<key>FacebookDisplayName</key>
-    <string>{{ your facebook app display name }}</string>
+    <string>NormSimpleCRM</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

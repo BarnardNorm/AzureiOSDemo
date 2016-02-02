@@ -17,5 +17,7 @@
 - (void)authenticateWithAccessToken:(NSString *)token completion:(void (^)(BOOL success, NSError *error))completion;
 - (void)readAllFromTable:(NSString *)tableName completion:(void (^)(NSArray *results, NSError *error))completion;
 - (void)saveContactInfo:(NSDictionary *)contactInfo withCompletion:(void (^)(NSDictionary *contact, NSError *error))completion ;
+- (void)queryHistoryForContact:(NSDictionary *)contact completion:(void (^)(NSArray *results, NSError *error))completion;
+- (void)saveMessage:(NSDictionary *)message forContact:(NSDictionary *)contact completion:(void (^)(NSDictionary *message, NSError *error))completion;
 
 @end

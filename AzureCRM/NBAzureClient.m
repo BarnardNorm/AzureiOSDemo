@@ -56,11 +56,32 @@
     }];
 }
 
+- (void)queryHistoryForContact:(NSDictionary *)contact completion:(void (^)(NSArray *results, NSError *error))completion; {
+    MSTable *table = [self.client tableWithName:@"message"];
+    NSPredicate *byContactId = [NSPredicate predicateWithFormat:@"contactId == %@", contact[@"id"]];
+    MSQuery *query = [table queryWithPredicate:byContactId];
+    [query readWithCompletion:^(MSQueryResult * _Nullable result, NSError * _Nullable error) {
+        completion(result.items, error);
+    }];
+
+}
+
+- (void)saveMessage:(NSDictionary *)message forContact:(NSDictionary *)contact completion:(void (^)(NSDictionary *message, NSError *error))completion; {
+    MSTable *messageTable = [self.client tableWithName:@"message"];
+    NSMutableDictionary *msg = [message mutableCopy];
+    msg[@"contactId"] = contact[@"id"];
+    [messageTable insert:msg completion:completion];
+}
+
+
 - (void)saveContactInfo:(NSDictionary *)contactInfo withCompletion:(void (^)(NSDictionary *contact, NSError *error))completion ;{
     MSTable *contactTable = [self.client tableWithName:@"contact"];
     [contactTable insert:contactInfo completion:^(NSDictionary * _Nullable item, NSError * _Nullable error) {
         completion(item, error);
     }];
 }
+
+
+
 
 @end
