@@ -25,6 +25,7 @@
 		4983B0BE1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4983B0BC1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.xib */; };
 		4983B0C01C5EF0A70040E1E2 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4983B0BF1C5EF0A70040E1E2 /* MicrosoftAzureMobile.framework */; };
 		4983B0C41C5EF44A0040E1E2 /* NBUnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4983B0C31C5EF44A0040E1E2 /* NBUnderlineTextField.m */; };
+		49F5DDF51C60314300533DC5 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F5DDF41C60314300533DC5 /* SVProgressHUD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		4983B0BF1C5EF0A70040E1E2 /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicrosoftAzureMobile.framework; path = ../MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
 		4983B0C21C5EF44A0040E1E2 /* NBUnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBUnderlineTextField.h; sourceTree = "<group>"; };
 		4983B0C31C5EF44A0040E1E2 /* NBUnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBUnderlineTextField.m; sourceTree = "<group>"; };
+		49F5DDF41C60314300533DC5 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = ../Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F5DDF51C60314300533DC5 /* SVProgressHUD.framework in Frameworks */,
 				4983B0C01C5EF0A70040E1E2 /* MicrosoftAzureMobile.framework in Frameworks */,
 				4983B0AE1C5E7EC00040E1E2 /* FBSDKShareKit.framework in Frameworks */,
 				4983B0AC1C5E7E130040E1E2 /* FBSDKLoginKit.framework in Frameworks */,
@@ -105,6 +108,7 @@
 		4983B07F1C5D8C430040E1E2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49F5DDF41C60314300533DC5 /* SVProgressHUD.framework */,
 				4983B0BF1C5EF0A70040E1E2 /* MicrosoftAzureMobile.framework */,
 				4983B0AD1C5E7EC00040E1E2 /* FBSDKShareKit.framework */,
 				4983B0AB1C5E7E130040E1E2 /* FBSDKLoginKit.framework */,
@@ -189,6 +193,7 @@
 				4983B0781C5D8C430040E1E2 /* Sources */,
 				4983B0791C5D8C430040E1E2 /* Frameworks */,
 				4983B07A1C5D8C430040E1E2 /* Resources */,
+				49F5DDF61C60316100533DC5 /* carthage copy frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,6 +250,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49F5DDF61C60316100533DC5 /* carthage copy frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+			);
+			name = "carthage copy frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4983B0781C5D8C430040E1E2 /* Sources */ = {
@@ -366,6 +389,7 @@
 					"$(PROJECT_DIR)/AzureCRM",
 					"$(PROJECT_DIR)/FacebookSDKs-iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AzureCRM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -387,6 +411,7 @@
 					"$(PROJECT_DIR)/AzureCRM",
 					"$(PROJECT_DIR)/FacebookSDKs-iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AzureCRM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
