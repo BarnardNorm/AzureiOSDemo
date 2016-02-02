@@ -26,6 +26,12 @@
 		4983B0C01C5EF0A70040E1E2 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4983B0BF1C5EF0A70040E1E2 /* MicrosoftAzureMobile.framework */; };
 		4983B0C41C5EF44A0040E1E2 /* NBUnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4983B0C31C5EF44A0040E1E2 /* NBUnderlineTextField.m */; };
 		49F5DDF51C60314300533DC5 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F5DDF41C60314300533DC5 /* SVProgressHUD.framework */; };
+		49F5DDF91C6033F400533DC5 /* NBContactHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5DDF81C6033F400533DC5 /* NBContactHistoryTableViewController.m */; };
+		49F5DDFD1C603A9B00533DC5 /* NBRightDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5DDFB1C603A9B00533DC5 /* NBRightDetailTableViewCell.m */; };
+		49F5DDFE1C603A9B00533DC5 /* NBRightDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F5DDFC1C603A9B00533DC5 /* NBRightDetailTableViewCell.xib */; };
+		49F5DE031C603CC500533DC5 /* NBEditMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5DE021C603CC500533DC5 /* NBEditMessageTableViewController.m */; };
+		49F5DE071C603FA800533DC5 /* NBDatePickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5DE051C603FA800533DC5 /* NBDatePickerTableViewCell.m */; };
+		49F5DE081C603FA800533DC5 /* NBDatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F5DE061C603FA800533DC5 /* NBDatePickerTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +64,16 @@
 		4983B0C21C5EF44A0040E1E2 /* NBUnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBUnderlineTextField.h; sourceTree = "<group>"; };
 		4983B0C31C5EF44A0040E1E2 /* NBUnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBUnderlineTextField.m; sourceTree = "<group>"; };
 		49F5DDF41C60314300533DC5 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = ../Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		49F5DDF71C6033F400533DC5 /* NBContactHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBContactHistoryTableViewController.h; sourceTree = "<group>"; };
+		49F5DDF81C6033F400533DC5 /* NBContactHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBContactHistoryTableViewController.m; sourceTree = "<group>"; };
+		49F5DDFA1C603A9B00533DC5 /* NBRightDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBRightDetailTableViewCell.h; sourceTree = "<group>"; };
+		49F5DDFB1C603A9B00533DC5 /* NBRightDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBRightDetailTableViewCell.m; sourceTree = "<group>"; };
+		49F5DDFC1C603A9B00533DC5 /* NBRightDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NBRightDetailTableViewCell.xib; sourceTree = "<group>"; };
+		49F5DE011C603CC500533DC5 /* NBEditMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBEditMessageTableViewController.h; sourceTree = "<group>"; };
+		49F5DE021C603CC500533DC5 /* NBEditMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBEditMessageTableViewController.m; sourceTree = "<group>"; };
+		49F5DE041C603FA800533DC5 /* NBDatePickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBDatePickerTableViewCell.h; sourceTree = "<group>"; };
+		49F5DE051C603FA800533DC5 /* NBDatePickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBDatePickerTableViewCell.m; sourceTree = "<group>"; };
+		49F5DE061C603FA800533DC5 /* NBDatePickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NBDatePickerTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +111,7 @@
 		4983B07E1C5D8C430040E1E2 /* AzureCRM */ = {
 			isa = PBXGroup;
 			children = (
+				4983B0B91C5EC1B10040E1E2 /* Tableview Cells */,
 				4983B0A01C5E6B810040E1E2 /* Classes */,
 				4983B09F1C5E6AF90040E1E2 /* View Controllers */,
 				4983B08B1C5D8C430040E1E2 /* Assets.xcassets */,
@@ -121,6 +138,7 @@
 		4983B09F1C5E6AF90040E1E2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				49F5DDFF1C603C4B00533DC5 /* Message History */,
 				4983B0B51C5EC0620040E1E2 /* Contacts */,
 				4983B0B21C5EAD100040E1E2 /* Login */,
 				4983B0AF1C5EA7BB0040E1E2 /* NBRootViewController.h */,
@@ -155,7 +173,6 @@
 		4983B0B51C5EC0620040E1E2 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				4983B0B91C5EC1B10040E1E2 /* Tableview Cells */,
 				4983B09C1C5E6ACF0040E1E2 /* NBContactsTableViewController.h */,
 				4983B09D1C5E6ACF0040E1E2 /* NBContactsTableViewController.m */,
 				4983B0B61C5EC0A20040E1E2 /* NBEditContactTableViewController.h */,
@@ -170,6 +187,12 @@
 				4983B0BA1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.h */,
 				4983B0BB1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.m */,
 				4983B0BC1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.xib */,
+				49F5DDFA1C603A9B00533DC5 /* NBRightDetailTableViewCell.h */,
+				49F5DDFB1C603A9B00533DC5 /* NBRightDetailTableViewCell.m */,
+				49F5DDFC1C603A9B00533DC5 /* NBRightDetailTableViewCell.xib */,
+				49F5DE041C603FA800533DC5 /* NBDatePickerTableViewCell.h */,
+				49F5DE051C603FA800533DC5 /* NBDatePickerTableViewCell.m */,
+				49F5DE061C603FA800533DC5 /* NBDatePickerTableViewCell.xib */,
 			);
 			name = "Tableview Cells";
 			sourceTree = "<group>";
@@ -181,6 +204,17 @@
 				4983B0C31C5EF44A0040E1E2 /* NBUnderlineTextField.m */,
 			);
 			name = Controls;
+			sourceTree = "<group>";
+		};
+		49F5DDFF1C603C4B00533DC5 /* Message History */ = {
+			isa = PBXGroup;
+			children = (
+				49F5DDF71C6033F400533DC5 /* NBContactHistoryTableViewController.h */,
+				49F5DDF81C6033F400533DC5 /* NBContactHistoryTableViewController.m */,
+				49F5DE011C603CC500533DC5 /* NBEditMessageTableViewController.h */,
+				49F5DE021C603CC500533DC5 /* NBEditMessageTableViewController.m */,
+			);
+			name = "Message History";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,8 +275,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F5DE081C603FA800533DC5 /* NBDatePickerTableViewCell.xib in Resources */,
 				4983B0BE1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.xib in Resources */,
 				4983B0AA1C5E72100040E1E2 /* NBLoginView.xib in Resources */,
+				49F5DDFE1C603A9B00533DC5 /* NBRightDetailTableViewCell.xib in Resources */,
 				4983B08F1C5D8C430040E1E2 /* LaunchScreen.storyboard in Resources */,
 				4983B0B41C5EBE1D0040E1E2 /* NBRootView.xib in Resources */,
 				4983B08C1C5D8C430040E1E2 /* Assets.xcassets in Resources */,
@@ -277,12 +313,16 @@
 				4983B0A31C5E6BA50040E1E2 /* NBAzureClient.m in Sources */,
 				4983B0BD1C5EC1CF0040E1E2 /* NBTextfieldTableViewCell.m in Sources */,
 				4983B0841C5D8C430040E1E2 /* NBAppDelegate.m in Sources */,
+				49F5DE071C603FA800533DC5 /* NBDatePickerTableViewCell.m in Sources */,
+				49F5DDF91C6033F400533DC5 /* NBContactHistoryTableViewController.m in Sources */,
 				4983B0B81C5EC0A20040E1E2 /* NBEditContactTableViewController.m in Sources */,
 				4983B0A91C5E72100040E1E2 /* NBLoginViewController.m in Sources */,
 				4983B0811C5D8C430040E1E2 /* main.m in Sources */,
+				49F5DDFD1C603A9B00533DC5 /* NBRightDetailTableViewCell.m in Sources */,
 				4983B0B11C5EA7BB0040E1E2 /* NBRootViewController.m in Sources */,
 				4983B09E1C5E6ACF0040E1E2 /* NBContactsTableViewController.m in Sources */,
 				4983B0C41C5EF44A0040E1E2 /* NBUnderlineTextField.m in Sources */,
+				49F5DE031C603CC500533DC5 /* NBEditMessageTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

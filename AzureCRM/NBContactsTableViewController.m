@@ -8,6 +8,7 @@
 
 #import "NBAzureClient.h"
 #import "NBContactsTableViewController.h"
+#import "NBContactHistoryTableViewController.h"
 #import "NBEditContactTableViewController.h"
 
 @interface NBContactsTableViewController ()
@@ -88,5 +89,15 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
+
+#pragma mark - tableview delegate 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *user = self.contacts[indexPath.row];
+    NBContactHistoryTableViewController *viewController = [[NBContactHistoryTableViewController alloc] initWithContactInfo:user azureClient:self.azureClient];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+
 
 @end

@@ -6,6 +6,8 @@
 //  Copyright © 2016 NormBarnard. All rights reserved.
 //
 
+#import <SVProgressHUD/SVProgressHUD.h>
+
 #import "NBAzureClient.h"
 #import "NBEditContactTableViewController.h"
 #import "NBTextfieldTableViewCell.h"
@@ -20,7 +22,7 @@
 @implementation NBEditContactTableViewController
 
 - (instancetype)initWithContactInfo:(NSMutableDictionary *)contactInfo azureClient:(NBAzureClient *)azureClient; {
-    self = [super init];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (!self) {
         return nil;
     }
@@ -35,6 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithWhite:0.95f alpha:1.0f];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44.0f;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([NBTextfieldTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([NBTextfieldTableViewCell class])];
@@ -47,8 +50,11 @@
 
 - (IBAction)_saveButtonTapped:(id)sender {
     [self.view endEditing:YES];
+    [SVProgressHUD showInfoWithStatus:@"Saving Contact..."];
     NBEditContactTableViewController * __weak weakSelf = self;
+    
     [self.azureClient saveContactInfo:self.contactInfo withCompletion:^(NSDictionary *contact, NSError *error) {
+        [SVProgressHUD dismiss];
         NSAssert(error == nil, @"%@", error);
         [weakSelf.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }];
